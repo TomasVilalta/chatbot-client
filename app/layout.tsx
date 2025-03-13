@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import { RunTimeProvider } from "./RunTimeProvider";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -23,12 +24,20 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
-      </body>
-    </html>
+    <RunTimeProvider>
+      <html lang="en">
+        <head>
+          <title>Promtior Chatbot</title>
+          <meta name="description" content="Promtior Chatbot" />
+          <meta name="viewport" content="width=device-width, initial-scale=1" />
+          <link rel="icon" href="/favicon.ico" />
+        </head>
+        <body
+          className={`${geistSans.variable} ${geistMono.variable} dark antialiased`}
+        >
+          {children}
+        </body>
+      </html>
+    </RunTimeProvider>
   );
 }
