@@ -1,6 +1,12 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+## Promtior Chatbot client
+This is the client for the Promtior Chatbot, using Next.js and Shadcn/UI, Assistant UI and LangChain. 
+If you want to run it locally, you need to have the langserve server running. 
+You can find the repository of the langserve server [here](https://github.com/TomasVilalta/promtior-challenge)
+
 
 ## Getting Started
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+
 
 First, run the development server:
 
